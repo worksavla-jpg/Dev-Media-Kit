@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dev Savla — Directed by Dev | Filmmaker & Creator Media Kit</title>
+<meta name="description" content="Dev Savla is a filmmaker and content creator. Media kit, portfolio and brand collaborations.">
+<meta property="og:title" content="Dev Savla — Directed by Dev"><meta property="og:description" content="Stories that move people."><meta property="og:image" content="">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+/* ===== DESIGN TOKENS (edit here) ===== */
+:root{--noir:#080808;--char:#151515;--red:#C8102E;--crim:#8B0000;--paper:#F2EEE7;--grey:#898989;
+--head:'Inter Tight','Helvetica Neue',Arial,sans-serif;--body:'Neue Montreal','Helvetica Neue',Arial,sans-serif;
+--pad:clamp(20px,5vw,72px);--sec:clamp(80px,12vw,160px);--line:rgba(242,238,231,.14)}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;background:var(--noir)}
+body{background:var(--noir);color:var(--paper);font-family:var(--body);line-height:1.6;overflow-x:hidden;padding-top:env(safe-area-inset-top,0px)}
+a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit;color:inherit}
+h1,h2,h3,.head{font-family:var(--head);text-transform:uppercase;letter-spacing:-.04em;line-height:.92;font-weight:800}
+:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.grain{position:fixed;inset:-50%;pointer-events:none;z-index:90;opacity:.09;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");animation:gr .5s steps(3) infinite}
+@keyframes gr{0%{transform:translate(0,0)}33%{transform:translate(-3%,2%)}66%{transform:translate(2%,-3%)}}
+.mono{font-family:var(--head);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--grey);font-variant-numeric:tabular-nums}
+section{padding:var(--sec) var(--pad);position:relative;border-top:1px solid var(--line)}
+.wrap{max-width:1360px;margin:auto}
+h2{font-size:clamp(2.6rem,8vw,7rem);margin:14px 0 clamp(36px,6vw,72px)}h2 em{color:var(--red);font-style:normal}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 26px;font-family:var(--head);font-weight:700;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;border:1px solid var(--paper);background:none;cursor:pointer;transition:.3s}
+.btn.red{background:var(--red);border-color:var(--red)}.btn:hover{background:var(--paper);color:var(--noir);border-color:var(--paper)}.btn.red:hover{background:var(--crim);color:var(--paper);border-color:var(--crim)}
+/* loader */
+#load{position:fixed;inset:0;background:var(--noir);z-index:200;display:grid;place-items:center;transition:opacity .6s .2s,visibility .8s}
+#load.off{opacity:0;visibility:hidden}#load b{font-family:var(--head);font-size:clamp(6rem,24vw,16rem);color:var(--red);animation:fl .18s steps(2) infinite}
+@keyframes fl{50%{opacity:.8}}
+/* nav */
+nav{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:80;display:flex;justify-content:space-between;align-items:center;padding:18px var(--pad);mix-blend-mode:normal;background:linear-gradient(var(--noir),transparent)}
+nav .logo{font-family:var(--head);font-weight:800;font-size:.8rem;letter-spacing:.12em}nav .logo i{color:var(--red);font-style:normal}
+.links{display:flex;gap:28px;position:relative}.links a{font-family:var(--head);font-size:.74rem;letter-spacing:.14em;font-weight:500;padding:4px 0;color:var(--grey);transition:color .3s}.links a.on,.links a:hover{color:var(--paper)}
+#ind{position:absolute;bottom:-4px;height:2px;background:var(--red);transition:left .4s,width .4s;left:0;width:0}
+@media(max-width:720px){.links{gap:14px}.links a{font-size:.62rem}nav .logo span{display:none}}
+/* hero */
+#hero{min-height:100svh;display:grid;align-content:end;padding-top:120px;border:0;overflow:hidden}
+.hero-vis{position:absolute;right:var(--pad);top:14vh;width:min(38vw,460px);aspect-ratio:3/4;border:1px solid var(--line);background:radial-gradient(120% 80% at 70% 10%,rgba(200,16,46,.35),transparent 55%),linear-gradient(160deg,#222,var(--char) 60%,#050505);filter:grayscale(1) contrast(1.1)}
+.hero-vis img{width:100%;height:100%;object-fit:cover}
+.hero-vis::before,.frame::before{content:"";position:absolute;inset:-10px;border:1px solid var(--red);clip-path:polygon(0 0,28px 0,28px 1px,1px 1px,1px 28px,0 28px,0 0,100% 0,100% 28px,calc(100% - 1px) 28px,calc(100% - 1px) 1px,calc(100% - 28px) 1px,calc(100% - 28px) 0,100% 0,100% 100%,calc(100% - 28px) 100%,calc(100% - 28px) calc(100% - 1px),calc(100% - 1px) calc(100% - 1px),calc(100% - 1px) calc(100% - 28px),100% calc(100% - 28px),100% 100%,0 100%,0 calc(100% - 28px),1px calc(100% - 28px),1px calc(100% - 1px),28px calc(100% - 1px),28px 100%,0 100%);border:0;background:var(--red);opacity:.9}
+.rec{position:absolute;top:14px;left:14px;font-size:.7rem}.rec::before{content:"● ";color:var(--red);animation:fl .9s steps(2) infinite}
+h1{font-size:clamp(3.4rem,13.5vw,13rem);position:relative;z-index:2}h1 .r{display:block;overflow:hidden}h1 .r span{display:block;transform:translateY(105%);transition:transform 1s cubic-bezier(.2,.8,.2,1)}
+.ready h1 .r span{transform:none}.ready h1 .r:nth-child(2) span{transition-delay:.12s}h1 .r:nth-child(2){color:var(--red)}
+.hero-foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:28px;margin-top:40px;position:relative;z-index:2}
+.hero-foot p{max-width:440px;color:#cfcac2}.hero-foot .acts{display:flex;gap:12px;flex-wrap:wrap}
+@media(max-width:800px){.hero-vis{width:56vw;top:12vh;opacity:.55}}
+/* reveal */
+.rv{opacity:0;transform:translateY(32px);transition:opacity .9s,transform .9s cubic-bezier(.2,.8,.2,1)}.rv.in{opacity:1;transform:none}
+.mask{clip-path:inset(0 0 100% 0);transition:clip-path 1.2s cubic-bezier(.7,0,.2,1)}.mask.in{clip-path:inset(0)}
+/* about */
+.split{display:grid;grid-template-columns:5fr 7fr;gap:clamp(28px,6vw,96px);align-items:start}
+.frame{position:relative;aspect-ratio:4/5;background:linear-gradient(170deg,#262626,#0c0c0c);filter:grayscale(1);overflow:hidden}.frame img{width:100%;height:100%;object-fit:cover;transform:scale(1.12)}
+.facts{display:grid;gap:0;margin-top:32px}.facts div{display:flex;justify-content:space-between;gap:20px;padding:14px 0;border-top:1px solid var(--line)}.facts dd{text-align:right}
+.lead{font-size:clamp(1.2rem,2.2vw,1.7rem);line-height:1.4}
+@media(max-width:800px){.split{grid-template-columns:1fr}}
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(5,1fr);border:1px solid var(--line)}.stat{padding:32px 20px;border-left:1px solid var(--line)}.stat:first-child{border:0}
+.stat b{display:block;font-family:var(--head);font-size:clamp(2rem,4.4vw,4rem);letter-spacing:-.04em;margin:14px 0 4px;font-variant-numeric:tabular-nums}.stat.ph b{color:var(--grey)}
+@media(max-width:900px){.stats{grid-template-columns:1fr 1fr}.stat{border-top:1px solid var(--line)}}
+.note{margin-top:18px}
+/* work */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px}.chip{padding:8px 14px;border:1px solid var(--line);background:none;cursor:pointer;font-family:var(--head);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--grey);transition:.3s}.chip.on,.chip:hover{color:var(--paper);border-color:var(--red);background:rgba(200,16,46,.12)}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+.card{grid-column:span 4;position:relative;aspect-ratio:16/10;overflow:hidden;cursor:pointer;background:var(--char);border:1px solid var(--line);text-align:left;padding:0;display:block}
+.card:nth-child(5n+1){grid-column:span 7}.card:nth-child(5n+2){grid-column:span 5}
+.card .th{position:absolute;inset:0;transition:transform .9s cubic-bezier(.2,.8,.2,1);filter:grayscale(1);background:linear-gradient(135deg,#2a2a2a,#0d0d0d)}.card .th img{width:100%;height:100%;object-fit:cover}
+.card:hover .th{transform:scale(1.07);filter:grayscale(.3)}
+.card .ov{position:absolute;inset:0;padding:20px;display:flex;flex-direction:column;justify-content:space-between;background:linear-gradient(transparent 40%,rgba(8,8,8,.92))}
+.card h3{font-size:clamp(1.2rem,2.2vw,1.9rem)}.card .cat{color:var(--red)}.play{width:44px;height:44px;border:1px solid var(--paper);border-radius:50%;display:grid;place-items:center;font-size:.7rem}
+@media(max-width:800px){.card,.card:nth-child(n){grid-column:span 12}}
+/* modal */
+dialog{margin:auto;width:min(1040px,94vw);max-height:92vh;overflow:auto;background:var(--char);color:var(--paper);border:1px solid var(--line);padding:0}
+dialog::backdrop{background:rgba(0,0,0,.88)}.mi{padding:clamp(20px,4vw,48px)}.x{position:sticky;top:0;float:right;margin:12px;background:var(--noir);border:1px solid var(--line);width:40px;height:40px;cursor:pointer;z-index:2}
+.vid{aspect-ratio:16/9;background:#000;margin:20px 0;display:grid;place-items:center;border:1px solid var(--line)}.vid iframe{width:100%;height:100%;border:0}
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.cols h4{font-family:var(--head);color:var(--red);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
+@media(max-width:700px){.cols{grid-template-columns:1fr}}
+/* brands */
+.brands{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+.brand{border:1px solid var(--line);padding:24px;background:none;text-align:left;cursor:pointer;min-height:240px;display:flex;flex-direction:column;justify-content:space-between;transition:.3s;border-style:dashed}.brand:hover{border-color:var(--red)}
+.brand .lg{font-family:var(--head);font-weight:800;font-size:1.5rem;letter-spacing:-.03em}.brand img{max-height:40px;max-width:140px;filter:grayscale(1) brightness(2)}
+/* services */
+.svc{display:grid;grid-template-columns:70px 1fr 1.4fr auto;gap:24px;align-items:center;padding:28px 0;border-top:1px solid var(--line);transition:.3s}.svc:last-child{border-bottom:1px solid var(--line)}.svc:hover{padding-left:14px;background:linear-gradient(90deg,rgba(200,16,46,.1),transparent)}
+.svc h3{font-size:clamp(1.3rem,2.6vw,2.2rem)}.svc p{color:#bdb8b0}.svc .rate{display:block;margin-top:6px}
+@media(max-width:800px){.svc{grid-template-columns:40px 1fr;}.svc p,.svc button{grid-column:2}}
+/* insights */
+.ins{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.panel{border:1px solid var(--line);padding:28px}.panel h3{font-size:1.1rem;margin-bottom:22px;color:var(--grey)}
+.bar{margin:14px 0}.bar .t{display:flex;justify-content:space-between;font-size:.85rem;margin-bottom:6px}.bar .b{height:6px;background:var(--line)}.bar .b i{display:block;height:100%;background:var(--red);width:0;transition:width 1.4s cubic-bezier(.2,.8,.2,1)}
+.big{font-family:var(--head);font-size:clamp(3rem,6vw,5.4rem);font-weight:800;letter-spacing:-.05em;line-height:1}.big.ph{color:var(--grey)}
+@media(max-width:900px){.ins{grid-template-columns:1fr}}
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);position:relative}.steps::before{content:"";position:absolute;top:7px;left:0;right:0;height:1px;background:var(--line)}
+.step{padding:40px 24px 0 0;position:relative}.step::before{content:"";position:absolute;top:0;left:0;width:15px;height:15px;background:var(--red);border-radius:50%;box-shadow:0 0 0 6px var(--noir)}
+.step b{font-family:var(--head);font-size:3.4rem;color:var(--crim);letter-spacing:-.05em;display:block}.step h3{font-size:1.6rem;margin:6px 0 10px}.step p{color:#bdb8b0}
+@media(max-width:800px){.steps{grid-template-columns:1fr;border-left:1px solid var(--line);margin-left:7px}.steps::before{display:none}.step{padding:0 0 40px 34px}.step::before{left:-8px}}
+/* contact */
+#contact{text-align:center;overflow:hidden;background:radial-gradient(60% 50% at 50% 110%,rgba(200,16,46,.4),transparent 70%)}
+#contact h2{font-size:clamp(2.8rem,10vw,9rem);margin-bottom:28px}#contact p{max-width:520px;margin:0 auto 36px;color:#cfcac2}
+.cl{display:flex;flex-wrap:wrap;justify-content:center;gap:28px;margin-top:48px}.cl a{border-bottom:1px solid var(--red)}
+form{display:grid;gap:18px;margin-top:20px}form label{display:grid;gap:6px}.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+input,select,textarea{background:var(--noir);border:1px solid var(--line);padding:14px;width:100%;border-radius:0}input:focus,select:focus,textarea:focus{border-color:var(--red);outline:0}
+.hp{position:absolute;left:-9999px}@media(max-width:600px){.two{grid-template-columns:1fr}}
+footer{padding:30px var(--pad);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;border-top:1px solid var(--line)}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv,.mask{opacity:1;transform:none;clip-path:none}h1 .r span{transform:none}}
+</style></head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<div id="load" aria-hidden="true"><b>3</b></div>
+<nav aria-label="Primary"><a class="logo" href="#hero">DEV SAVLA <span>/ DIRECTED BY <i>DEV</i></span></a>
+<div class="links" id="links"><a href="#brands">WORK</a><a href="#about">ABOUT</a><a href="#insights">INSIGHTS</a><a href="#contact">CONTACT</a><i id="ind"></i></div></nav>
+<main id="app"></main>
+<footer><span class="mono" id="copy"></span><span class="mono" id="foot-tc"></span></footer>
+<dialog id="dlg" aria-label="Details"><button class="x" id="dx" aria-label="Close">✕</button><div class="mi" id="dbody"></div></dialog>
+
+<script>
+/* Site content */
+const CONFIG = {
+  seo:{ title:"Dev Savla — Directed by Dev", description:"Filmmaker and content creator. Media kit, portfolio and brand collaborations.", ogImage:"" },
+  contact:{ email:"collabs.direactedbydev@gmail.com", instagram:"https://www.instagram.com/direactedbydev/", handle:"@direactedbydev",
+            mediaKitUrl:"",            // PDF link; empty hides the download
+            formEndpoint:"",           // e.g. a Formspree URL; empty = opens your email app
+            copyright:"© 2026 Dev Savla. All rights reserved." },
+  hero:{ line1:"STORIES THAT", line2:"MOVE PEOPLE.", copy:"Filmmaking, technology and storytelling, created for audiences that care about how things are made.",
+         image:"", cta1:"EXPLORE MY WORK", cta2:"LET'S COLLABORATE" },
+  about:{ heading:"BEHIND THE FRAME.", image:"", name:"Dev Savla", handle:"@direactedbydev", location:"Dombivli, India",
+    bio:"Dev Savla is a filmmaker and content creator exploring the intersection of cinema, technology, visual storytelling and creative experimentation.",
+    specialisations:"Cinema · Tech · Design" },
+  stats:[ // value: number or null (placeholder). suffix e.g. "K", "%"
+    {label:"Instagram followers",value:13,dec:1,suffix:"K"},{label:"Total content views",value:3.4,dec:1,suffix:"M"},
+    {label:"Avg. reach per post",value:75.4,dec:1,suffix:"K"},{label:"Engagement rate",value:27.4,dec:1,suffix:"%"},{label:"Brand collaborations",value:4,suffix:""}],
+  categories:["Filmmaking tutorials","Gear","Lighting","Cinematography","Editing","Behind the scenes","Brand collab"],
+  projects:[ // thumb: image URL; video: Instagram Reel/post URL or YouTube/Vimeo embed or any link
+    {title:"Project title one",category:"Filmmaking tutorials",thumb:"",video:"https://www.instagram.com/reel/DPjGbqGgXtl/",description:"Describe the idea of this piece.",execution:"How it was shot, lit and edited.",results:"639.1K views"},
+    {title:"Project title two",category:"Gear",thumb:"",video:"https://www.instagram.com/reel/DSkPwSFDMnu/",description:"",execution:"",results:"631.6K views"},
+    {title:"Project title three",category:"Lighting",thumb:"",video:"https://www.instagram.com/reel/DbThFodMpO1/",description:"",execution:"",results:"578.4K views"},
+    {title:"Project title four",category:"Cinematography",thumb:"",video:"https://www.instagram.com/reel/DdwChKEsAZS/",description:"",execution:"",results:"489.8K views"},
+    {title:"Project title five",category:"Editing",thumb:"",video:"",description:"",execution:"",results:null},
+    {title:"Project title six",category:"Behind the scenes",thumb:"",video:"",description:"",execution:"",results:null}],
+  brands:{ heading:"BRANDS, MEET STORYTELLING.",
+    items:[ // Only add verified collaborations. Placeholder shown until you do.
+    {brand:"Super Profile",logo:"",campaign:"Sponsored Reel",brief:"",concept:"",delivered:"Instagram Reel",performance:null,link:"https://www.instagram.com/reel/Dd6rnF5s78V/"},
+    {brand:"Cunin",logo:"",campaign:"Sponsored Reel",brief:"",concept:"",delivered:"Instagram Reel",performance:null,link:"https://www.instagram.com/reel/Dbaxlv4MHgL/"},
+    {brand:"IFP",logo:"",campaign:"Sponsored Reel",brief:"",concept:"",delivered:"Instagram Reel",performance:null,link:"https://www.instagram.com/reel/DcyZ24BMLF0/"},
+    {brand:"Street Fighter Movie",logo:"",campaign:"Movie PR Reel",brief:"",concept:"",delivered:"Instagram Reel",performance:null,link:"https://www.instagram.com/reel/DeHnsLislRu/"}]},
+  insights:{ // percentages only from real analytics; null = placeholder
+    age:[["15–24",57],["25–34",31],["35–44",8],["45–54",3],["55+",1]],
+    geo:[["India",81.39],["Pakistan",3.74],["United States",2.79],["Bangladesh",1.89]],
+    gender:[["Men",90],["Women",10]],
+    reach:[["Avg. reach per post","75.4K"],["Engagement rate","27.4%"]] },
+  process:[["01","DISCOVER","Understand the brand, audience, and objective."],["02","CONCEPT","Develop the creative idea and visual approach."],
+           ["03","PRODUCE","Create and edit the content."],["04","DELIVER","Publish or deliver the agreed assets and review results."]]
+};
+/* ===================== RENDERING (no edits needed) ===================== */
+const C=CONFIG,$=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
+const esc=s=>String(s??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]));
+const safeUrl=u=>/^https?:\/\//i.test(u||"")?u:"";
+const img=(u,alt="")=>safeUrl(u)?`<img src="${esc(u)}" alt="${esc(alt)}" loading="lazy" decoration>`.replace(" decoration",""):"";
+document.title=C.seo.title;$('meta[name=description]').content=C.seo.description;$('meta[property="og:image"]').content=C.seo.ogImage||"";
+const mail=C.contact.email,ig=C.contact.instagram;
+const pct=v=>v==null?"--":v+"%";
+const bars=a=>a.map(([l,v])=>`<div class="bar"><div class="t"><span>${esc(l)}</span><span class="head">${pct(v)}</span></div><div class="b"><i data-w="${v==null?0:v}"></i></div></div>`).join("");
+const A=C.about;
+$('#app').innerHTML=`
+<section id="hero"><div class="hero-vis" aria-hidden="${!C.hero.image}">${img(C.hero.image,"Dev Savla")}<span class="rec mono">REC <span class="tc">00:00:00:00</span></span></div>
+<div class="wrap" style="width:100%"><h1><span class="r"><span>${esc(C.hero.line1)}</span></span><span class="r"><span>${esc(C.hero.line2)}</span></span></h1>
+<div class="hero-foot"><p>${esc(C.hero.copy)}</p><div class="acts"><a class="btn red" href="#brands">${esc(C.hero.cta1)} →</a><a class="btn" href="#contact" data-enq>${esc(C.hero.cta2)}</a></div></div>
+<p class="mono" style="margin-top:36px">SCENE 01 · TAKE 01 · 35MM · 24FPS</p></div></section>
+
+<section id="about"><div class="wrap split"><div class="frame mask">${img(A.image,A.name)}</div>
+<div class="rv"><p class="mono">02 / THE DIRECTOR</p><h2>${esc(A.heading).replace("FRAME.","<em>FRAME.</em>")}</h2><p class="lead">${esc(A.bio)}</p>
+<dl class="facts"><div><dt class="mono">Name</dt><dd>${esc(A.name)} (${esc(A.handle)})</dd></div><div><dt class="mono">Location</dt><dd>${esc(A.location)}</dd></div><div><dt class="mono">Specialisations</dt><dd>${esc(A.specialisations)}</dd></div></dl></div></div></section>
+
+<section id="stats"><div class="wrap"><p class="mono rv">03 / CREDITS</p><div class="stats rv" style="margin-top:24px">${C.stats.map(s=>`<div class="stat ${s.value==null?"ph":""}"><span class="mono">${esc(s.label)}</span><b ${s.value!=null?`data-count="${s.value}" data-dec="${s.dec||0}" data-suf="${esc(s.suffix)}"`:""}>${s.value==null?"—":"0"}</b>${s.value==null?'<span class="mono">Add figure</span>':""}</div>`).join("")}</div>
+</div></section>
+
+
+
+<section id="brands"><div class="wrap"><p class="mono rv">04 / COLLABORATIONS</p><h2 class="rv">${esc(C.brands.heading).replace("STORYTELLING.","<em>STORYTELLING.</em>")}</h2><div class="brands" id="bgrid"></div>
+</div></section>
+
+
+
+<section id="insights"><div class="wrap"><p class="mono rv">05 / AUDIENCE</p><h2 class="rv">KNOW THE <em>AUDIENCE.</em></h2>
+<div class="ins rv"><div class="panel"><h3>Age</h3>${bars(C.insights.age)}</div><div class="panel"><h3>Geography</h3>${bars(C.insights.geo)}</div><div class="panel"><h3>Gender</h3>${C.insights.gender.map(([l,v])=>`<div class="bar" style="margin:0 0 28px"><span class="mono">${esc(l)}</span><div class="big">${pct(v)}</div><div class="b" style="margin-top:12px"><i data-w="${v==null?0:v}"></i></div></div>`).join("")}</div></div>
+<div class="ins rv" style="margin-top:16px;grid-template-columns:repeat(2,1fr)">${C.insights.reach.map(([l,v])=>`<div class="panel"><span class="mono">${esc(l)}</span><div class="big ${v==null?"ph":""}" style="margin-top:12px">${v==null?"--":esc(v)}</div></div>`).join("")}</div>
+</div></section>
+
+<section id="process"><div class="wrap"><p class="mono rv">06 / PROCESS</p><h2 class="rv">LET'S MAKE SOMETHING <em>WORTH WATCHING.</em></h2><div class="steps">${C.process.map(p=>`<div class="step rv"><b>${p[0]}</b><h3>${p[1]}</h3><p>${p[2]}</p></div>`).join("")}</div></div></section>
+
+<section id="contact"><div class="wrap"><p class="mono">07 / FINAL SCENE</p><h2 class="rv">EVERY GREAT STORY<br><em>STARTS SOMEWHERE.</em></h2><p>Have a brand, a product, or an idea worth bringing to life? Let's create something memorable.</p>
+<button class="btn red" data-enq>START A COLLABORATION →</button>
+<div class="cl"><a href="mailto:${esc(mail)}">${esc(mail)}</a><a href="${esc(ig)}" target="_blank" rel="noopener">Instagram ${esc(C.contact.handle)}</a>${safeUrl(C.contact.mediaKitUrl)?`<a href="${esc(C.contact.mediaKitUrl)}" download>Download media kit</a>`:""}</div></div></section>`;
+$('#copy').textContent=C.contact.copyright;
+
+/* portfolio */
+$('#bgrid').innerHTML=C.brands.items.map((b,i)=>`<button class="brand" data-b="${i}" style="${b.placeholder?"":"border-style:solid"}"><div>${safeUrl(b.logo)?img(b.logo,b.brand):`<span class="lg">${esc(b.brand)}</span>`}<p class="mono" style="margin-top:10px">${b.placeholder?"Placeholder":"Case study"}</p></div><div><h3 style="font-size:1.4rem">${esc(b.campaign)}</h3><span class="mono">View →</span></div></button>`).join("");
+
+/* modal */
+const dlg=$('#dlg'),db=$('#dbody');
+const embed=u=>{u=safeUrl(u);if(!u)return'';let m;
+ if(m=u.match(/instagram\.com\/(reel|p)\/([\w-]+)/))return`<iframe src="https://www.instagram.com/${m[1]}/${m[2]}/embed" title="Instagram video" loading="lazy" allowfullscreen></iframe>`;
+ if(m=u.match(/(?:youtu\.be\/|v=)([\w-]{11})/))return`<iframe src="https://www.youtube-nocookie.com/embed/${m[1]}" title="Video" loading="lazy" allowfullscreen></iframe>`;
+ if(m=u.match(/vimeo\.com\/(\d+)/))return`<iframe src="https://player.vimeo.com/video/${m[1]}" title="Video" loading="lazy" allowfullscreen></iframe>`;
+ return`<a class="btn red" href="${esc(u)}" target="_blank" rel="noopener">Watch video →</a>`};
+const col=(h,t)=>t?`<div><h4>${h}</h4><p>${esc(t)}</p></div>`:"";
+$('#app').addEventListener('click',e=>{
+ const c=e.target.closest('[data-p]'),b=e.target.closest('[data-b]'),q=e.target.closest('[data-enq]');
+ if(c){const p=C.projects[c.dataset.p];db.innerHTML=`<p class="mono">${esc(p.category)}</p><h2 style="font-size:clamp(2rem,5vw,4rem);margin:10px 0">${esc(p.title)}</h2><div class="vid">${embed(p.video)}</div><div class="cols">${col("Concept",p.description)}${col("Execution",p.execution)}${col("Results",p.results)}</div>`;dlg.showModal()}
+ else if(b){const x=C.brands.items[b.dataset.b];db.innerHTML=`<p class="mono">${x.placeholder?"Placeholder — not a real collaboration":"Case study"}</p><h2 style="font-size:clamp(2rem,5vw,4rem);margin:10px 0">${esc(x.brand)} — ${esc(x.campaign)}</h2><div class="cols" style="margin-top:28px">${col("Brief",x.brief)}${col("Concept",x.concept)}${col("Delivered",x.delivered)}</div><div class="cols" style="margin-top:24px">${col("Performance",x.performance)}<div><h4>Published</h4>${safeUrl(x.link)?`<a class="btn" href="${esc(x.link)}" target="_blank" rel="noopener">View content →</a>`:""}</div></div>`;dlg.showModal()}
+ else if(q){e.preventDefault();enquiry(q.dataset.enq||"")}});
+$('#dx').onclick=()=>dlg.close();dlg.addEventListener('click',e=>{if(e.target==dlg)dlg.close()});
+function enquiry(topic){db.innerHTML=`<p class="mono">New enquiry${topic?" · "+esc(topic):""}</p><h2 style="font-size:clamp(2rem,5vw,3.6rem);margin:10px 0 20px">LET'S MAKE IT.</h2>
+<form id="f" novalidate><div class="two"><label><span class="mono">Name *</span><input name="name" required autocomplete="name"></label><label><span class="mono">Brand *</span><input name="brand" required></label></div>
+<label><span class="mono">Email *</span><input name="email" type="email" required autocomplete="email"></label>
+<label><span class="mono">Campaign objective *</span><textarea name="objective" rows="3" required>${topic?esc(topic)+": ":""}</textarea></label>
+<div class="two"><label><span class="mono">Budget range</span><select name="budget"><option>Not sure yet</option><option>Under ₹50k</option><option>₹50k – ₹1.5L</option><option>₹1.5L – ₹5L</option><option>₹5L+</option></select></label>
+<label><span class="mono">Timeline</span><select name="timeline"><option>Flexible</option><option>Within 2 weeks</option><option>1 month</option><option>2–3 months</option></select></label></div>
+<input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true"><button class="btn red" type="submit">Send enquiry →</button><p class="mono" id="fs" role="status"></p></form>`;dlg.showModal();
+ $('#f').onsubmit=async ev=>{ev.preventDefault();const f=ev.target,d=Object.fromEntries(new FormData(f));
+  if(d.website)return;if(!d.name||!d.brand||!/^\S+@\S+\.\S+$/.test(d.email)||!d.objective.trim()){$('#fs').textContent="Please complete all required fields with a valid email.";return}
+  const ep=safeUrl(C.contact.formEndpoint);
+  if(ep){try{const r=await fetch(ep,{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify(d)});if(!r.ok)throw 0;f.innerHTML='<p class="lead">Thank you — your enquiry has been sent.</p>';return}catch(_){$('#fs').textContent="Couldn't send. Opening your email app instead…"}}
+  const body=`Name: ${d.name}\nBrand: ${d.brand}\nEmail: ${d.email}\nObjective: ${d.objective}\nBudget: ${d.budget}\nTimeline: ${d.timeline}`;
+  location.href=`mailto:${mail}?subject=${encodeURIComponent("Collaboration enquiry — "+d.brand)}&body=${encodeURIComponent(body)}`}}
+
+/* motion */
+const tc=()=>{const t=Math.floor(performance.now()/1000),f=Math.floor(performance.now()/41.6)%24,p=n=>String(n).padStart(2,"0");return`${p(Math.floor(t/3600))}:${p(Math.floor(t/60)%60)}:${p(t%60)}:${p(f)}`};
+setInterval(()=>{$$('.tc').forEach(e=>e.textContent=tc());$('#foot-tc').textContent="TC "+tc()},80);
+const RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
+let n=3;const L=$('#load b');const li=setInterval(()=>{n--;if(n<1||RM){clearInterval(li);$('#load').classList.add('off');document.body.classList.add('ready');$('#hero').classList.add('ready');document.documentElement.classList.add('ready');return}L.textContent=n},RM?0:330);
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const t=e.target;t.classList.add('in');
+ $$('[data-count]',t).forEach(el=>{const v=+el.dataset.count,s=el.dataset.suf,st=performance.now();(function k(now){const p=Math.min(1,(now-st)/1400);{const d=+el.dataset.dec||0;el.textContent=(v*(1-Math.pow(1-p,3))).toLocaleString(undefined,{minimumFractionDigits:d,maximumFractionDigits:d})+s}if(p<1&&!RM)requestAnimationFrame(k)})(st)});
+ $$('[data-w]',t).forEach(el=>el.style.width=el.dataset.w+"%");io.unobserve(t)}),{threshold:.15});
+$$('.rv,.mask').forEach(e=>io.observe(e));
+/* nav indicator */
+const links=$$('#links a'),ind=$('#ind');function mv(a){if(!a)return;ind.style.left=a.offsetLeft+"px";ind.style.width=a.offsetWidth+"px"}
+const so=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const a=links.find(l=>l.getAttribute('href')=="#"+e.target.id);links.forEach(l=>l.classList.toggle('on',l==a));mv(a)}}),{rootMargin:"-45% 0px -50% 0px"});
+$$('main section').forEach(s=>so.observe(s));mv(null);
+/* parallax */
+if(!RM)addEventListener('scroll',()=>{const y=scrollY;const v=$('.hero-vis');if(v)v.style.transform=`translateY(${y*.12}px)`;const i=$('.frame img');if(i){const r=i.parentElement.getBoundingClientRect();i.style.transform=`scale(1.12) translateY(${(r.top-innerHeight/2)*-.04}px)`}},{passive:true});
+</script></body></html>
